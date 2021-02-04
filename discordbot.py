@@ -17,5 +17,11 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+@client.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    if message.content == '/test':
+        await message.channel.send('うんち')    
 
 bot.run(token)
