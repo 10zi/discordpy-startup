@@ -21,7 +21,7 @@ async def ping(ctx):
 async def on_message(message):
     if message.author.bot:
         return
-    if message.content == '':
+    if message.content == '/unti':
         await message.channel.send('うんち')    
 
 bot.run(token)
